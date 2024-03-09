@@ -53,9 +53,6 @@ Therefore, no, you don't have to do a git init, because it is already done by gi
 - git remote add origin git@github.com:******/faq.git  
 - git push -u origin main
 
-## create a remote repository and clone it
-
-
 # 协同开发&分支管理
 
 |Branch      | Description|
