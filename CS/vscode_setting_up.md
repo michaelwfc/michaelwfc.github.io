@@ -52,7 +52,7 @@
   "python.defaultInterpreterPath":"C:\\Users\\***\\Anaconda\\envs\\sec_master\\python.exe",
    "python.envFile": "${workspaceFolder}/dev.env",
 
-  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.cwd": "${workspaceFolder}",
   "terminal.integrated.fontSize":10,
   /* 
