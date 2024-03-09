@@ -207,12 +207,71 @@ The integrated terminal is used when debugging to activate a new python environm
 
     ] 
 }
-
-
-
 ```
 
-# shotcuts
+# Unit test
 
+<https://code.visualstudio.com/docs/python/testing#_intellisense-for-pytest>
+<https://www.youtube.com/watch?v=ucjRpS7WCPA>
+<https://blog.thenets.org/how-to-create-a-modern-pytest-dev-environment-with-vscode/>
+
+# Shotcuts
+
+|command | function |
+|--------|----------|
+|Ctrl + `| show terminal|
+|Shift + Alt + F|格式化代码|
+|Shift + Alt +A |块区域注释|
+|Ctrl+Shift+N |打开新的编辑器窗口|
+
+## add shortcuts
+
+1. Press CTRL+SHIFT+P.
+2. Type:  Open keyboard shortcuts (json)
+3. Select An editor will appear with keybindings.json file. Place the following JSON in there and save:
+
+```json
+[
+    {
+        "key": "ctrl+shift+u",
+        "command": "editor.action.transformToUppercase",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "editor.action.transformToLowercase",
+        "when": "editorTextFocus"
+    },
+    { 
+        // Navigate to Top of Call Stack
+        "key":"alt+f10", 
+        "command":"workbench.action.debug.callStackTop" 
+    }
+]
+```
 
 # code templates
+
+1. In vscode, File -> Preferences -> Configure User Snippets. Type python and choose python. A json file will open
+2. Copy-paste all or the specific snippets you want in the file and save
+3. Ctrl+Shift+P then Reload Window to activate the changes
+
+This is the default main snippet:
+
+## [vs-code-snippets](https://adamtheautomator.com/vs-code-snippets/#Creating_a_Custom_Python_Snippet)
+
+[snippet-syntax](https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax)
+
+```json
+"if(main)": {
+        "prefix": "main",
+        "body": ["if __name__ == \"__main__\":", "    ${1:pass}"],
+        "description": "Code snippet for a `if __name__ == \"__main__\": ...` block"
+    },
+```
+
+If you want to change or tweak which text triggers the snippet, modify the prefix field. The prefix field can be a string as shown above or a list if you want more triggers:
+
+```json
+"prefix": ["__main__", "ifmain", "main", "ifm", "if m"],
+```
