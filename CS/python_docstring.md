@@ -1,5 +1,6 @@
 # Google Docstring Format
 [Documenting Python Code: A Complete Guide](https://realpython.com/documenting-python-code/)
+[PEP 257 – Docstring Conventions](https://peps.python.org/pep-0257/)
 [Google docstrings](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)
 [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html)
 [Example Google Style Python Docstrings](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html#example-google-style-python-docstrings)
