@@ -1,4 +1,10 @@
 
+# LLM
+[LMSYS Chatbot Arena Leaderboard](https://chat.lmsys.org/)
+<!-- https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard -->
+[open_llm_leaderboard](https://huggingface.co/spaces/HuggingFaceH4/open_llm_leaderboard)
+
+
 # Courses
 
 [Prompt Engineering: 通用AI 各种信息](https://www.youtube.com/@engineerprompt)
@@ -8,6 +14,7 @@
 [Olivio Sarikas AI 绘画各种信息](https://www.youtube.com/@OlivioSarikas)
 [Aitrepreneur: 全AI，通俗易懂，应用层面，手把手教学，声音魔性](https://www.youtube.com/@Aitrepreneur)
 [Scott Detweiler：ComfyUI 的各种教程](https://www.youtube.com/@sedetweiler)
+
 
 # Bilibili
 - [跟李沐学AI：大神](https://space.bilibili.com/1567748478?spm_id_from=333.337.search-card.all.click)
@@ -29,3 +36,8 @@
 - [Paperwithtcode](https://paperswithcode.com/)
 - [FreeCodeCamp.org](https://www.youtube.com/@freecodecamp)
 
+# github-awesome
+
+- [Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM)
+- [awesome-langchai](https://github.com/kyrolabs/awesome-langchain)
+- [awesome-production-machine-learning](https://github.com/EthicalML/awesome-production-machine-learning)
