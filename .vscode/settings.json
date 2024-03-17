@@ -1,8 +1,8 @@
 {
     "files.autoSaveWhenNoErrors": true,
  
-   "python.defaultInterpreterPath":"C:\\Users\\***\\Anaconda\\envs\\sec_master\\python.exe",
-    "python.envFile": "${workspaceFolder}/dev.env",
+    "python.defaultInterpreterPath":"C:\\Users\\***\\Anaconda\\envs\\sec_master\\python.exe",
+    "python.envFile": "${workspaceFolder}${pathSeparator}.vscode${pathSeparator}dev.env",
  
    "terminal.integrated.defaultProfile.windows": "Git Bash",
    "terminal.integrated.cwd": "${workspaceFolder}",
@@ -13,13 +13,7 @@
    "terminal.integrated.env.windows": {
      "PYTHONPATH": "${env:PYTHONPATH};${workspaceFolder}${pathSeparator}src"
    },
-   "terminal.integrated.automationProfile.windows": { 
-         "GitBash":{
-             "path": "C:\\Program Files\\Git\\bin\\bash.exe" 
-         } 
-    }, 
-   "terminal.integrated.defaultProfile.windows": "Git Bash",
-   "terminal.integrated.fontSize": 10,
+
  
     //自动检查代码 
      "python.linting.enabled": true, 
@@ -32,7 +26,6 @@
  
    // 单元测试 
      "python.testing.cwd": "${workspaceFolder}${pathSeparator}src",
- 
      "python.testing.autoTestDiscoverOnSaveEnabled": true, 
      "python.testing.pytestEnabled": true, 
      "python.testing.pytestPath": "C:\\Users\\*****\\Anaconda\\envs\\sec_master\\Scripts\\pytest.exe", 
