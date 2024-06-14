@@ -20,6 +20,8 @@
 |             |10.1       |           | 1.7.1     |2.3.0|
 |             |11.2       |           |           |     |
 
+
+
 # cuda on windows10
 
 - https://www.tensorflow.org/install/source#gpu
@@ -98,3 +100,13 @@ except RuntimeError as e:
   print(e)
 
 ```
+
+
+# GPU
+| architecture| GPUS                       |                   |
+|-------------|----------------------------|-------------------|
+|             | V100 | |
+|             | A5000|
+| Ampere      |NVIDIA A10G or RTX 4090/3090| Flash attention   |
+
+

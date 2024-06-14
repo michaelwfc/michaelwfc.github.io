@@ -1,3 +1,11 @@
+- [LLM](#llm)
+- [Courses](#courses)
+- [Books](#books)
+- [Bilibili](#bilibili)
+- [Community](#community)
+- [github-awesome](#github-awesome)
+- [blogger](#blogger)
+
 
 # LLM
 [LMSYS Chatbot Arena Leaderboard](https://chat.lmsys.org/)
@@ -22,6 +30,10 @@
 [Olivio Sarikas AI 绘画各种信息](https://www.youtube.com/@OlivioSarikas)
 [Aitrepreneur: 全AI，通俗易懂，应用层面，手把手教学，声音魔性](https://www.youtube.com/@Aitrepreneur)
 [Scott Detweiler：ComfyUI 的各种教程](https://www.youtube.com/@sedetweiler)
+
+# Books
+
+[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)
 
 
 # Bilibili
@@ -49,3 +61,7 @@
 - [Awesome-LLM](https://github.com/Hannibal046/Awesome-LLM)
 - [awesome-langchai](https://github.com/kyrolabs/awesome-langchain)
 - [awesome-production-machine-learning](https://github.com/EthicalML/awesome-production-machine-learning)
+
+# blogger
+- [Lightning AI 的首席人工智能教育者 Sebastian Raschka](https://magazine.sebastianraschka.com) 
+- [Lightning-AI/litgpt](https://github.com/Lightning-AI/litgpt)
