@@ -14,12 +14,14 @@
     - [Example: Decision Tree Split](#example-decision-tree-split)
     - [Summary](#summary)
 - [Random Forest](#random-forest)
+  - [Key Characteristics:](#key-characteristics)
 - [GBM](#gbm)
   - [Algorithm](#algorithm)
+  - [Key Characteristics:](#key-characteristics-1)
   - [How Gradient Boosting Machine (GBM) Works](#how-gradient-boosting-machine-gbm-works)
   - [Example Implementation](#example-implementation-1)
   - [Explanation of Hyperparameters](#explanation-of-hyperparameters)
-  - [Summary](#summary-1)
+  - [Differences between Random Forest and GBM:](#differences-between-random-forest-and-gbm)
 
 
 # Linear Regression
@@ -197,16 +199,51 @@ Decision trees aim to minimize Gini impurity at each split, thereby creating mor
 
 # Random Forest
 
+Random Forest and Gradient Boosting Machine (GBM) are both ensemble learning methods that combine multiple decision trees to improve performance over a single tree. However, they have different approaches and characteristics. Here’s a detailed comparison:
+
+## Key Characteristics:
+
+- Bagging (Bootstrap Aggregating):
+
+Random Forest uses bagging, where multiple decision trees are trained independently on different bootstrap samples of the dataset (random subsets with replacement).
+The final prediction is made by averaging the predictions (for regression) or taking a majority vote (for classification) from all the trees.
+
+- Feature Randomness:
+
+During the training of each tree, a random subset of features is considered for splitting at each node, adding additional randomness and reducing correlation among trees.
+
+- Parallel Training:
+
+Trees in a Random Forest are trained independently and can be trained in parallel, making the process faster.
+
+
+
+
 # GBM
+Gradient Boosting Machine (GBM) is an ensemble learning method that builds models sequentially, where each new model tries to correct the errors made by the previous models. 
+Key hyperparameters like the number of trees, learning rate, and tree depth need careful tuning to balance model performance and prevent overfitting. 
+
 
 [XGboost](https://xgboost.readthedocs.io/en/stable/index.html)
 [lightgbm]
-## [Algorithm](https://en.wikipedia.org/wiki/Gradient_boosting#Algorithm)
 
+## [Algorithm](https://en.wikipedia.org/wiki/Gradient_boosting#Algorithm)  
+
+
+## Key Characteristics:
+
+- Boosting:
+GBM uses boosting, where trees are added sequentially, each new tree attempting to correct the errors of the combined ensemble of all previous trees.
+Trees are built in a dependent manner, focusing on the residual errors of the existing model.
+- Gradient Descent:
+GBM minimizes the loss function by fitting new trees to the negative gradient of the loss function with respect to the current model’s predictions.
+- Learning Rate:
+A learning rate (shrinkage) parameter scales the contribution of each new tree, controlling the step size in the optimization process.
 
 ## How Gradient Boosting Machine (GBM) Works
 
-Gradient Boosting Machine (GBM) is an ensemble learning method that builds models sequentially, where each new model tries to correct the errors made by the previous models. Here's a step-by-step explanation of how it works, followed by an example with code and hyperparameters.
+
+Here's a step-by-step explanation of how it works, followed by an example with code and hyperparameters.
 
 For a regression problem with a loss function \( L(y, F(x)) \), where \( y \) is the true value, and \( F(x) \) is the predicted value, the gradient boosting algorithm proceeds as follows:
 
@@ -295,7 +332,26 @@ print("Feature importances:", importances)
   
 - **random_state**: A seed used by the random number generator for reproducibility of the results.
 
-## Summary
 
-Gradient Boosting Machine (GBM) builds an ensemble of decision trees in a sequential manner, where each tree corrects the errors of the previous one. Key hyperparameters like the number of trees, learning rate, and tree depth need careful tuning to balance model performance and prevent overfitting. The provided code demonstrates a simple implementation of GBM for a classification task using `scikit-learn`.
 
+
+
+
+
+
+
+
+## Differences between Random Forest and GBM:
+
+| Aspect                  | Random Forest                                                | Gradient Boosting Machine                                     |
+|-------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
+| **Ensemble Method**     | Bagging (Bootstrap Aggregating)                              | Boosting                                                     |
+| **Tree Independence**   | Trees are trained independently                              | Trees are trained sequentially, each correcting the previous |
+| **Training Speed**      | Faster (parallel training)                                   | Slower (sequential training)                                 |
+| **Overfitting Risk**    | Lower (due to averaging)                                     | Higher (requires careful tuning)                             |
+| **Model Complexity**    | Simpler (fewer hyperparameters)                              | More complex (more hyperparameters)                          |
+| **Interpretability**    | Less interpretable than single trees                         | Less interpretable, but feature importance can be derived    |
+| **Prediction**          | Average/majority vote                                        | Weighted sum of trees                                        |
+| **Use Case**            | Robust to noise, large datasets, high-dimensional data       | High accuracy, customizable loss functions                   |
+
+Both Random Forest and GBM are powerful ensemble methods, but they are suited to different scenarios. Random Forest is generally easier to use and less prone to overfitting, making it a good default choice for many tasks. GBM, on the other hand, can provide better performance when properly tuned and is often used in competitions and applications requiring high accuracy.
