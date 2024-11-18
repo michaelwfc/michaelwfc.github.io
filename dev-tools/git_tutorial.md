@@ -104,7 +104,7 @@ git config --global --unset https.proxy
 ## ssh config
 
 - 使用秘钥生成工具(ssh-keygen、puttygen等)生成rsa秘钥  
-ssh-keygen -t rsa -C "******": 生成后的公钥会存放在 C:/Users/******/.ssh/id_rsa.pub 或者 /home/wangfc/.ssh/id_rsa, shell在用户主目录里找到.ssh目录
+ssh-keygen -t rsa -C username: 生成后的公钥会存放在 C:/Users/username/.ssh/id_rsa.pub 或者 /home/wangfc/.ssh/id_rsa, shell在用户主目录里找到.ssh目录
 
 - 将rsa公钥添加到代码托管平台
 添加生成的id_rsa.pub文件中的公钥（用记事本打开全部复制）到github的setting / SSH AND GPG KEY / SSH keys  
