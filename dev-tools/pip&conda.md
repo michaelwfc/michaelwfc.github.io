@@ -220,11 +220,6 @@ Let me know if you run into any issues!
 
 #  Git Bash
 
-
-
-
-
-
 ## .bashrc
 
 ### git bashrc 的环境变量
@@ -256,8 +251,9 @@ In order to make the conda command available in Git Bash, you need to add conda�
 The shell script we need is located inside of the folder your Anaconda distribution added to your computer. 
 
 1. Verify Python is installed correctly in Conda with Anaconda Prompt  or cmd
-2. add conda’s shell script to your .bashrc file
-   navigate Anaconda distribution  etc -> profile.d , ex: /c/Users/user/anaconda3/etc/profile.d
+2. add conda’s shell script to your .bashrc file  
+   navigate Anaconda distribution  etc -> profile.d 
+   - On Windows 11, the conda.sh script is typically located in the anaconda3/etc/profile.d directory,  ex: /c/Users/user/anaconda3/etc/profile.d
    ```bash
    echo ". ${PWD}/conda.sh" >> ~/.bashrc
    # If the path does contain spaces (such as in your username), you will need to add single quotes in the command like so:
