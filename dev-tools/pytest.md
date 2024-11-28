@@ -18,12 +18,26 @@
 PyCharm 显示可用测试的列表。单击"创建新测试"。在打开 Create test 对话框中进行设置， 点击 OK 会自动生成测试文件 test_rectangle 与 测试方法模板。
 
 # pytest in vscode
+```json
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "pytest",
+    "python.testing.pytestArgs": ["-s"],
+    //Indicates whether to automatically add search paths based on some predefined names (like src)
+    "python.analysis.autoSearchPaths": true,
+
+```
 
 # pytest.ini
 
 ```ini
 [pytest]
-log_cli = true
+testpaths=tests
+log_cli=true
+log_cli_level = DEBUG
+# to add src to pythonpath
+pythonpath=src 
 # supress the DeprecationWarning when debug pytest
 filterwarnings =
      ignore::DeprecationWarning
