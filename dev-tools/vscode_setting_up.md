@@ -229,6 +229,7 @@ The integrated terminal is used when debugging to activate a new python environm
 1. Press CTRL+SHIFT+P.
 2. Type:  Open keyboard shortcuts (json)
 3. Select An editor will appear with keybindings.json file. Place the following JSON in there and save:
+   WINDOWS: C:\Users\<YourUsername>\AppData\Roaming\Code\User\keybindings.json
 
 ```json
 [
