@@ -1,0 +1,5 @@
+.obsidian/workspace*.json
+
+# Optional: ignore transient plugin data
+.obsidian/cache/
+.obsidian/plugins/*/data.json
