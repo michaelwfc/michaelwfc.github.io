@@ -43,33 +43,94 @@ workspace/
     └── qa/
 
 ```
-
-- `raw/` is source material (voice memos, meeting transcripts, API docs).
-- `wiki/` is the maintained knowledge layer (the "Company Intranet").
-- `wiki/index.md` is the content catalog.
-- `wiki/log.md` is the append-only activity log.
-
-## Directory rules
-
 ### Raw sources
+- `raw/` is source material (voice memos, meeting transcripts, API docs).
 - Never modify source content in `raw/` unless the user explicitly asks for file hygiene work unrelated to the knowledge layer.
 - `raw/assets/` stores downloaded local images or attachments referenced by sources.
 - When ingesting a URL, save its markdown content to `raw/websites` before processing. Never edit files in `raw/`.
 
-### Wiki content
+
+### Wiki Directories
 - `wiki/` is your persistent knowledge layer. You own it entirely. Pages are organized by category:
-- `wiki/overview.md` top-level synthesis: its core aspects, a map to the rest of the wiki
+- `wiki/index.md`  The catalog of every wiki page.
+- `wiki/log.md` is the append-only activity log.
 - `wiki/sources/` contains one summary page per ingested raw document
 - `wiki/concepts/` foundational ideas (e.g., how it works, core principles,topic, thesis, method, and theme pages.)
 - `wiki/entities/` named things (e.g., features, products, people, organizations,  places, works, etc)
 - `wiki/qa/` filed answers from multi-page query syntheses which contains reusable outputs produced in response to questions.
 - `wiki/comparisons` — side-by-side tables
-- `wiki/archive/` contains pages that are merged, demoted, or kept only for traceability.
-- `wiki/staging/` contains sources or drafts pending human review before ingestion.
 
 Do not write pages under `wiki/domains/[Your Domain]/*`, directoryly write pages under `wiki/concepts`, `wiki/entities` etcs
----
 
+
+
+
+### index.md
+
+The catalog of every wiki page. Updated on every ingest. The LLM reads this first when answering any query.
+
+`wiki/index.md` is the primary navigation surface. Keep it compact and skimmable.
+
+- Organize by section: overview, concepts,  entities, sources, comparisions, queries, staging.
+- Exclude legacy flat folders from the main index once migration is complete.
+- Each entry should include:
+  - page link
+  - one-line description
+  - optional metadata such as updated date, source count, or confidence
+
+
+### log.md
+
+Append-only. Never edit past entries.
+
+Format: `## [YYYY-MM-DD] operation | Article Title`
+
+Operations: `init` `ingest` `query` `lint`
+
+- Summary of what changed
+- Pages touched: [page](relative/path.md), [page](relative/path.md)
+
+Example:
+```
+## [2026-04-09] init | Wiki initialized
+
+## [2026-04-10] ingest | What is GitHub Copilot
+Saved raw/what-is-github-copilot.md. Created wiki/sources/what-is-github-copilot.md,
+wiki/entities/copilot-free.md, wiki/overview.md (updated). Updated index.md.
+
+## [2026-04-10] query | What IDEs support agent mode?
+Read entities/copilot-chat.md, comparisons/ide-support.md. Filed answer as wiki/comparisons/agent-mode-ides.md.
+```
+
+
+### Wiki Page formats
+#### source
+
+Format: `## Key Takeaways, ## Pages Created/Updated, ## See Also`
+
+#### entity
+
+Format: `## Overview, ## Key Facts, ## See Also `
+
+#### concept
+
+Format: `## Definition, ## How It Works, ## See Also`
+
+#### comparison
+
+Format: `## Summary Table, ## See Also`
+
+#### qa
+
+Format: `## Question, ## Answer, ## Pages Consulted, ## See Also`
+
+#### synthesis
+
+
+
+
+
+---
 ## General writing rules
 
 ### Page conventions
@@ -83,7 +144,6 @@ Every substantive wiki page should try to include:
 - Distinguish facts, interpretations, open questions, and contradictions.
 - Update existing pages when possible instead of creating duplicates.
 - When a new page is created, ensure it is linked from at least one other page and listed in `wiki/index.md`.
-- Keep the active wiki smaller than the total archive. If a page is weakly sourced, duplicated, merged, or no longer worth surfacing, move it to `wiki/archive/`.
 - log.md entries are never edited or deleted
 
 ### Quality bar
@@ -183,57 +243,11 @@ Check for:
 After reporting all six checks, offer to fix any issues found.
 
 Expected result: the lint pass should leave behind an inspectable report, not just a transient chat answer.
-The lint pass should also identify pages that belong in `wiki/archive/` because they are weakly sourced, duplicated, stale, or artifact-level noise.
----
-
-### index.md
-
-The catalog of every wiki page. Updated on every ingest. The LLM reads this first when answering any query.
-
-`wiki/index.md` is the primary navigation surface. Keep it compact and skimmable.
-
-- Organize by section: overview, concepts,  entities, queries, staging.
-- Exclude `wiki/archive/` from the main index.
-- Exclude legacy flat folders from the main index once migration is complete.
-- Each entry should include:
-  - page link
-  - one-line description
-  - optional metadata such as updated date, source count, or confidence
 
 
-### log.md
-
-Append-only. Never edit past entries.
-
-Format: `## [YYYY-MM-DD] operation | description`
-
-Operations: `init` `ingest` `query` `lint`
-
-- Summary of what changed
-- Pages touched: [page](relative/path.md), [page](relative/path.md)
-
-Example:
-```
-## [2026-04-09] init | Wiki initialized
-
-## [2026-04-10] ingest | What is GitHub Copilot
-Saved raw/what-is-github-copilot.md. Created wiki/sources/what-is-github-copilot.md,
-wiki/entities/copilot-free.md, wiki/overview.md (updated). Updated index.md.
-
-## [2026-04-10] query | What IDEs support agent mode?
-Read entities/copilot-chat.md, comparisons/ide-support.md. Filed answer as wiki/comparisons/agent-mode-ides.md.
-```
 
 ---
 
-### Page formats
 
-| Type | Required sections |
-|------|-------------------|
-| entity | ## Overview, ## Key Facts, ## See Also |
-| concept | ## Definition, ## How It Works, ## See Also |
-| comparison | ## Summary Table, ## See Also |
-| source | ## Key Takeaways, ## Pages Created/Updated, ## See Also |
-| qa | ## Question, ## Answer, ## Pages Consulted, ## See Also |
 
 

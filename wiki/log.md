@@ -1,4 +1,4 @@
-## [2026-07-11] ingest | Karpathy AI LLM Wiki
+## [2026-07-11] ingest | Karpathy LLM Wiki
 
 - Ingested the source from the Karpathy gist and created a source summary page.
 - Added a concept page describing the LLM wiki methodology.

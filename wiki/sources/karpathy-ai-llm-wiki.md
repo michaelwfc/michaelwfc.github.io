@@ -6,11 +6,12 @@ tags:
   - wiki
   - knowledge-management
 date_created: 2026-07-11
-source: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 ---
 
 # Karpathy AI LLM Wiki
 
+## Source
+[Karpathy-LLM-wiki](raw/blog/Karpathy-LLM-wiki.md)
 ## Key Takeaways
 
 - The source proposes using an LLM to maintain a persistent, interlinked markdown wiki rather than relying only on retrieval over raw documents.

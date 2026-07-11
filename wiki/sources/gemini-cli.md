@@ -6,10 +6,12 @@ tags:
   - cli
   - google-ai
 date_created: 2026-07-11
-source: AI/Google-AI/Gemini-CLI.md
+
 ---
 
 # Gemini CLI
+## Source: 
+[Gemini-CLI](AI/Google-AI/Gemini-CLI.md)
 
 ## Key Takeaways
 
