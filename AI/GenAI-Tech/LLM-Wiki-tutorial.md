@@ -5,6 +5,10 @@ tags:
 
 [Karpathy-LLM-wiki](raw/blog/Karpathy-LLM-wiki.md)
 
+# LLM WiKi Agents
+
+- https://github.com/SriSatyaLokesh/copilot-llm-wiki/tree/main
+
 # LLM Wiki 解析
 
 [LLM Wiki 深度解析：从 RAG、GraphRAG 到大模型知识运行时](https://www.youtube.com/watch?v=g1Y7Rrz7u4k)
@@ -14,7 +18,15 @@ tags:
 ![[wiki_index_log_01.png]]
 
 ![[wiki_control.png]]![[knowledeg_objects.png]]
+![[frontformat_fields.png]]
+![[llm_wiki_projects.png|697]]
 
+![[llm_wiki_four_actions.png]]
+
+
+![[llm_wiki_3_signal.png.png]]
+![[graphrag_vs_rag.png]]
+![[adaptive_rag.png]]
 #  🚀 实战落地：在当前仓库中实现 "LLM Wiki" 架构
   你在 Karpathy AI LLM Wiki 知识库.md 中记录了通过 AI Agent 协同维护持久化知识库的设想。你现在正在使用的 Gemini CLI 恰恰是最完美的落地工具！
 
@@ -28,7 +40,5 @@ tags:
     > "请帮我阅读这篇关于自监督学习的文章，提炼要点写入 AI-tech/，并自动更新 index.md 和 log.md，同时检查是否与现有的 NLP/知识图谱.md 有关联。"
 
 
-# LLM WiKi Agents
 
-- https://github.com/SriSatyaLokesh/copilot-llm-wiki/tree/main
 

@@ -137,7 +137,7 @@ Format: `## Question, ## Answer, ## Pages Consulted, ## See Also`
 Every substantive wiki page should try to include:
 
 - All new wiki pages MUST Use markdown 
-- All new wiki pages MUST contain YAML frontmatter at the top (e.g., tags, date_created) matching the files in `wiki/templates/`.
+- All new wiki pages MUST contain YAML frontmatter at the top (e.g., tags, date_created) 
 - Prefer concise, high-signal pages over long raw notes.
 - Cross-link aggressively using relative markdown links.
 - Preserve uncertainty explicitly.
@@ -145,6 +145,18 @@ Every substantive wiki page should try to include:
 - Update existing pages when possible instead of creating duplicates.
 - When a new page is created, ensure it is linked from at least one other page and listed in `wiki/index.md`.
 - log.md entries are never edited or deleted
+
+
+### frontmatter tempalte
+- **type**
+- **title**
+- **summary**
+- **provenance**: full/partial/None
+- **sources** : [path.md]
+- **tags**
+- **status**
+- **create_date**
+- **update_date**
 
 ### Quality bar
 
