@@ -1,5 +1,5 @@
 ---
-title: LLM Wiki Domain Overview
+title: LLM Wiki Overview
 type: overview
 tags:
   - llm
@@ -8,9 +8,9 @@ tags:
 date_created: 2026-07-11
 ---
 
-# LLM Wiki Domain Overview
+# LLM Wiki Overview
 
-This domain captures the core idea behind Karpathy's LLM wiki pattern: use an LLM to build and maintain a persistent, interlinked knowledge base that compounds over time instead of re-deriving answers from raw documents on every query.
+This captures the core idea behind Karpathy's LLM wiki pattern: use an LLM to build and maintain a persistent, interlinked knowledge base that compounds over time instead of re-deriving answers from raw documents on every query.
 
 ## Core idea
 
@@ -24,7 +24,7 @@ This domain captures the core idea behind Karpathy's LLM wiki pattern: use an LL
 2. Extract the signal into the wiki as summaries, concepts, entities, and source notes.
 3. Update the index and activity log so future queries can navigate the knowledge layer efficiently.
 
-## Pages in this domain
+## Pages
 
 - [LLM Wiki Methodology](concepts/llm-wiki-methodology.md)
 - [Karpathy AI LLM Wiki](sources/karpathy-ai-llm-wiki.md)
