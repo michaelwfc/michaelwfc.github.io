@@ -44,10 +44,11 @@ When ingesting a URL, save its markdown content to `raw/websites` before process
 - `wiki/concepts/` foundational ideas (e.g., how it works, core principles,topic, thesis, method, and theme pages.)
 - `wiki/entities/` named things (e.g., features, products, people, organizations,  places, works, etc)
 - `wiki/qa/` filed answers from multi-page query syntheses which contains reusable outputs produced in response to questions.
-- `comparisons` — side-by-side tables
+- `wiki/comparisons` — side-by-side tables
 - `wiki/archive/` contains pages that are merged, demoted, or kept only for traceability.
 - `wiki/staging/` contains sources or drafts pending human review before ingestion.
 
+Do not write pages under `wiki/domains/[Your Domain]/*`, directoryly write pages under `wiki/concepts`, `wiki/entities` etcs
 ---
 
 ## General writing rules
@@ -84,6 +85,7 @@ Every substantive wiki page should try to include:
 - Never edit or delete past entries in `log.md` — append only
 - Never write a wiki page without first reading `index.md` — check before creating
 - Never write a page that contradicts an existing page without flagging the contradiction to the user
+  
 
 ---
 
@@ -123,7 +125,7 @@ Triggered by: "ingest X", "add X to the wiki", "process this", "add this source"
    If the source materially changes the top-level picture (new plan tier, new capability, new product area), update `wiki/overview.md` as well.
 6. **Update index.md** add new pages, refresh stale descriptions, keep sections sorted.
 7. **Append to log.md.** Append an entry to `wiki/log.md`. 
-8. **Cleanup**: You MUST delete the source file from `raw/` after successfully updating the log and index. **Requirement**: Use the `execute` tool with a terminal command (like `rm` or `Remove-Item`) to perform the deletion; do NOT use standard file-editing tools for this step.
+
 
 Discuss takeaways with the user before writing. Prefer ingesting one source at a time.
 
