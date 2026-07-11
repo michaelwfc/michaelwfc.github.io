@@ -1,4 +1,4 @@
-Welcome to my Github Page
+Welcome to Michael Github Page
 
 # AI
 

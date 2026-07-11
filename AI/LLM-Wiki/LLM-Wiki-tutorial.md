@@ -3,6 +3,19 @@ tags:
   - wiki
 ---
 
+# LLM WiKi 
+
+- https://github.com/SriSatyaLokesh/copilot-llm-wiki/tree/main
+
+# LLM Wiki 解析
+
+[LLM Wiki 深度解析：从 RAG、GraphRAG 到大模型知识运行时](https://www.youtube.com/watch?v=g1Y7Rrz7u4k)
+
+[Andrej Karpathy’s LLM Wiki: Create your own knowledge base](https://medium.com/@urvvil08/andrej-karpathys-llm-wiki-create-your-own-knowledge-base-8779014accd5)
+
+![[wiki_control.png]]![[knowledeg_objects.png]]
+
+
 #  🚀 实战落地：在当前仓库中实现 "LLM Wiki" 架构
   你在 Karpathy AI LLM Wiki 知识库.md 中记录了通过 AI Agent 协同维护持久化知识库的设想。你现在正在使用的 Gemini CLI 恰恰是最完美的落地工具！
 

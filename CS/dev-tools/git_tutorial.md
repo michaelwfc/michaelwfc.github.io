@@ -123,8 +123,7 @@ origin  https://github.com/******/adversarial_text_classification.git (push)
 - 设置认证方式为 https 协议
 git remote set-url origin   https://github.com/******/faq.git
 
-
-- git push -u origin master #将本地仓库push远程仓库，并将origin设为默认远程仓库
+- git push -u origin master 
 
 
 
