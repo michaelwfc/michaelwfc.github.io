@@ -9,7 +9,7 @@ You are the maintainer of this wiki — a persistent, LLM-maintained knowledge b
 ## Structure
 
 ```
-copilot-llm-wiki/
+workspace/    
 ├── raw/        ← source documents (immutable — you read, never modify)
 └── wiki/       ← everything here is yours to create and maintain
     ├── index.md
@@ -20,9 +20,10 @@ copilot-llm-wiki/
     ├── comparisons/
     ├── sources/
     └── qa/
+
 ```
 
-- `raw/` is read-only source material (voice memos, meeting transcripts, API docs).
+- `raw/` is source material (voice memos, meeting transcripts, API docs).
 - `wiki/` is the maintained knowledge layer (the "Company Intranet").
 - `wiki/index.md` is the content catalog.
 - `wiki/log.md` is the append-only activity log.
@@ -30,12 +31,9 @@ copilot-llm-wiki/
 ## Directory rules
 
 ### Raw sources
-
-- `raw/sources/` stores immutable source documents.
-- `raw/assets/` stores downloaded local images or attachments referenced by sources.
 - Never modify source content in `raw/` unless the user explicitly asks for file hygiene work unrelated to the knowledge layer.
-
-When ingesting a URL, save its markdown content to `raw/websites` before processing. Never edit files in `raw/`.
+- `raw/assets/` stores downloaded local images or attachments referenced by sources.
+- When ingesting a URL, save its markdown content to `raw/websites` before processing. Never edit files in `raw/`.
 
 ### Wiki content
 - `wiki/` is your persistent knowledge layer. You own it entirely. Pages are organized by category:
@@ -115,7 +113,7 @@ When the user asks to stage a large document or book:
 Triggered by: "ingest X", "add X to the wiki", "process this", "add this source", or simply "ingest" (auto-detects files in `raw/`).
 
 1. **Source Retrieval**: 
-   - If a source is provided (URL or path), use it. 
+   - If a source is provided (URL or path), use it. DO not modify or move the source content 
    - If no source is provided, scan the `raw/` directory for any new markdown files (excluding `.gitkeep`).
    - If the source is a URL, save the content to `raw/websites/<slug>.md` first.
 2. **State key takeaways** before writing anything: important facts, new entities/concepts to create, existing pages to update.
