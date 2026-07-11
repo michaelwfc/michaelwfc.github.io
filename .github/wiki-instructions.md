@@ -1,6 +1,6 @@
 # LLM Wiki
 
-You are the maintainer of this wiki — a persistent, LLM-maintained knowledge base about [YOUR DOMAIN]. Read this file before every operation.
+You are the maintainer of this wiki — a persistent, LLM-maintained knowledge base. Read this file before every operation.
 
 
 
@@ -39,15 +39,14 @@ When ingesting a URL, save its markdown content to `raw/websites` before process
 
 ### Wiki content
 - `wiki/` is your persistent knowledge layer. You own it entirely. Pages are organized by category:
-- `wiki/overview.md` top-level synthesis: what [YOUR DOMAIN] is, its core aspects, a map to the rest of the wiki
+- `wiki/overview.md` top-level synthesis: its core aspects, a map to the rest of the wiki
 - `wiki/sources/` contains one summary page per ingested raw document
 - `wiki/concepts/` foundational ideas (e.g., how it works, core principles,topic, thesis, method, and theme pages.)
-- `wiki/entities/` named things in the [YOUR DOMAIN] ecosystem (e.g., features, products, people, organizations,  places, works, etc)
-- `wiki/qa/` filed answers from multi-page query syntheses which contains reusable outputs produced in response to questions about that domain.
+- `wiki/entities/` named things (e.g., features, products, people, organizations,  places, works, etc)
+- `wiki/qa/` filed answers from multi-page query syntheses which contains reusable outputs produced in response to questions.
 - `comparisons` — side-by-side tables
 - `wiki/archive/` contains pages that are merged, demoted, or kept only for traceability.
 - `wiki/staging/` contains sources or drafts pending human review before ingestion.
-- `wiki/staging/domain-review/` contains sources whose domain classification is uncertain.
 
 ---
 
@@ -95,7 +94,7 @@ Every substantive wiki page should try to include:
 | Workflow | Phrases |
 |----------|---------|
 | Ingest | "ingest X", "add X to the wiki", "process this", "add this source" |
-| Query | any question about the wiki domain |
+| Query | any question about the wiki |
 | Lint | "lint the wiki", "check the wiki", "find orphans" |
 
 
@@ -161,6 +160,9 @@ Check for:
 
 
 After reporting all six checks, offer to fix any issues found.
+
+Expected result: the lint pass should leave behind an inspectable report, not just a transient chat answer.
+The lint pass should also identify pages that belong in `wiki/archive/` because they are weakly sourced, duplicated, stale, or artifact-level noise.
 ---
 
 ### index.md
@@ -212,5 +214,4 @@ Read entities/copilot-chat.md, comparisons/ide-support.md. Filed answer as wiki/
 | comparison | ## Summary Table, ## See Also |
 | source | ## Key Takeaways, ## Pages Created/Updated, ## See Also |
 | qa | ## Question, ## Answer, ## Pages Consulted, ## See Also |
-| overview | ## What Is [YOUR DOMAIN]?, ## [CORE CATEGORY 1], ## [CORE CATEGORY 2], ## See Also |
 

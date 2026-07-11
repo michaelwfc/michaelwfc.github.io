@@ -32,25 +32,3 @@ The agent should optimize for durable synthesis, tracking engineering constraint
 
 
 
-
-
-### Lint
-
-When the user asks for a cleanup, health check, or lint pass:
-
-1. Run `python3 scripts/lint.py` to identify broken links and orphaned files.
-2. Check for legacy flat pages that should move under `wiki/domains/`.
-3. Check for duplicated concepts or entities across domains.
-4. Check for contradictions across pages.
-5. Check for stale claims that newer sources appear to supersede.
-6. Check for important terms mentioned repeatedly without dedicated pages.
-7. Recommend global promotion only when a concept/entity is reused across two or more domains.
-8. Propose or apply fixes.
-9. Append a `lint` entry to `wiki/log.md`.
-10. Run `./scripts/commit_wiki.sh` to auto-version the changes.
-
-Expected result: the lint pass should leave behind an inspectable report, not just a transient chat answer.
-The lint pass should also identify pages that belong in `wiki/archive/` because they are weakly sourced, duplicated, stale, or artifact-level noise.
-
-
-
