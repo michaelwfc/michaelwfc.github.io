@@ -22,6 +22,12 @@
 
 - Character.AI:  扮演不同角色
 - 聊天机器人工具 JanitorAI
+
+[rasa](https://github.com/RasaHQ/rasa)
+[rasagpt](https://github.com/paulpierre/RasaGPT)
+
+[gpt4free](https://github.com/xtekky/gpt4free)
+
   
 ## AI writer tool
 
