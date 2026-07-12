@@ -2,7 +2,7 @@ Welcome to Michael Github Page
 
 # AI
 
-- [AI_learning_resource](./AI/AI_learning_resource.md)
+- [GenAI_learning_resource](GenAI_learning_resource.md)
 - [AI_applications](./AI/AI_applications.md)
 - [chatbot](./AI/chatbot.md)
 
