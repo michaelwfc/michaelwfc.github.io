@@ -9,6 +9,8 @@ tags:
 
 - https://github.com/SriSatyaLokesh/copilot-llm-wiki/tree/main
 
+
+
 # LLM Wiki 解析
 
 [LLM Wiki 深度解析：从 RAG、GraphRAG 到大模型知识运行时](https://www.youtube.com/watch?v=g1Y7Rrz7u4k)
@@ -42,3 +44,7 @@ tags:
 
 
 
+# LLM-Wiki-Projects
+[llm_wiki](https://github.com/nashsu/llm_wiki)
+[atomicmemory]
+[langchain-openwiki](https://www.youtube.com/watch?v=nIVu3zfYprI)

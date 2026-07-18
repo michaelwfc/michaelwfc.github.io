@@ -93,6 +93,30 @@ Dataview 可以理解为：
 
 ## Obsidian 插件
 - Obsidian web clipper: website -> markdown
+
+
+### Official Obsidian Web Clipper
+
+This is now the official solution from Obsidian.
+
+#### Installation
+
+The clipper itself is a **browser extension**, not an Obsidian plugin.
+
+Install it for:
+
+- Chrome
+- Edge
+- Firefox
+
+Search:
+
+> **Obsidian Web Clipper**
+
+or visit
+
+> [https://obsidian.md/clipper](https://obsidian.md/clipper)
+> 
 - 
 ----
 

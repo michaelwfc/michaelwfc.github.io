@@ -14,7 +14,7 @@ Welcome to Michael Github Page
 # Electronic&Robot
 
 - [rebot_projects](./Electronic&Robot/rebot_projects.md)
-- [electronic_learning_resource](./Electronic&Robot/electronic_learning_resource.md)
+- [EE-learning_resource](EE-learning_resource.md)
 
 # Dev-Tools
 
