@@ -1,2 +1,7 @@
+- https://leetcode.com/
+- https://leetcode.cn/
+- https://www.nowcoder.com/exam/interview?questionJobId=10&subTabName=interview_page
 - https://github.com/labuladong/fucking-algorithm
+- https://labuladong.online/en/algo/home/
 - https://www.xiaolincoding.com/project/xiaolinnote.html
+- https://github.com/guocong-bincai/ai-interview-guide
