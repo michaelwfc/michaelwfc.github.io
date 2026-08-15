@@ -1,0 +1,2 @@
+- https://github.com/labuladong/fucking-algorithm
+- https://www.xiaolincoding.com/project/xiaolinnote.html
